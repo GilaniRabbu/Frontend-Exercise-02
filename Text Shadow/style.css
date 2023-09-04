@@ -1,0 +1,30 @@
+.h1 {
+    text-shadow: 2px 2px teal;
+}
+
+.h2 {
+    text-shadow: 2px 2px 5px tomato;
+}
+
+.h3 {
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.h4 {
+    text-shadow: 0 0 3px #FF0000;
+}
+
+.h5 {
+    text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+}
+
+.h6 {
+    color: white;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+
+.h7 {
+    color: coral;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
