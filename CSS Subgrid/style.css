@@ -1,0 +1,132 @@
+@import "https://unpkg.com/open-props/open-props.min.css";
+@import "https://unpkg.com/open-props/normalize.min.css";
+
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    background: var(--surface-2);
+    font-family: 'Google Sans', sans-serif, system-ui;
+}
+
+/* Subgrid rows */
+
+main {
+    padding: 1rem 0;
+    display: grid;
+    gap: 1rem;
+    width: min(calc(100% - 2rem), 1280px);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+article {
+    box-shadow: var(--shadow-4);
+    background: var(--surface-1);
+    border-radius: var(--radius-2);
+    overflow: hidden;
+    padding-bottom: 1rem;
+}
+
+:where(h2) {
+    margin: 0;
+    line-height: 1;
+}
+
+article :where(h2, p, a) {
+    padding: 0 1rem;
+    display: block;
+}
+
+article a {
+    text-align: center;
+}
+
+article a:link {
+    color: var(--violet-5);
+}
+
+article a:visited {
+    color: var(--blue-5);
+}
+
+article a:hover {
+    color: var(--green-5);
+}
+
+article a:active,
+article a:focus {
+    color: var(--purple-5);
+}
+
+article img {
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+/* The Magic */
+
+article img {
+    height: 100%;
+}
+
+article {
+    display: grid;
+    grid-row: span 4;
+    grid-template-rows: subgrid;
+}
+
+body:after {
+    content: "Subgrid is not supported, try Firefox?";
+    font-size: var(--font-size-fluid-2);
+    font-weight: var(--font-weight-9);
+    background: var(--yellow-3);
+    position: fixed;
+    padding: 1rem;
+    bottom: 1rem;
+    right: 1rem;
+}
+
+@supports (grid-template-rows: subgrid) {
+    body:after {
+        display: none;
+    }
+}
+
+/* ======================================== */
+
+/* Subgrid columns */
+
+section {
+    padding: 2rem 0;
+    display: grid;
+    gap: 1rem;
+    width: min(calc(100% - 2rem), 1280px);
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+.box {
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-column: span 2;
+    box-shadow: var(--shadow-4);
+    border-radius: var(--radius-2);
+    overflow: hidden;
+}
+
+.bg-box {
+    background: var(--green-3);
+    height: 150px;
+}
+
+.box-content :where(h2, p) {
+    padding: 0.3rem 1rem;
+    display: block;
+}

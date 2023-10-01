@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic rows for subgrid</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Roboto", sans-serif;
+            font-size: 1.25rem;
+            margin: 3rem;
+        }
+
+        li {
+            margin-bottom: 1rem;
+            list-style: upper-roman inside;
+        }
+
+        li::marker {
+            font-size: 150%;
+            color: #00b7A8;
+            font-family: "Comic Sans MS", cursive, sans-serif;
+        }
+
+        .lists {
+            display: grid;
+            grid-auto-flow: column;
+            grid-auto-rows: 1fr;
+        }
+
+        .with-subgrid {
+            --end-row: 15;
+        }
+
+        .with-subgrid>ul {
+            display: grid;
+            grid-row: 1 / var(--end-row);
+            grid-template-rows: subgrid;
+        }
+
+        p {
+            display: list-item;
+            list-style: upper-alpha inside;
+        }
+
+        p::marker {
+            font-size: 200%;
+            color: #00b7A8;
+            font-family: "Comic Sans MS", cursive, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <h2>Without subgrid</h2>
+        <div class="lists">
+            <ul class="without-subgrid">
+                <li>Lorem ipsum dolor sit.</li>
+                <li>Voluptates rem maxime saepe?</li>
+                <li>Dolores excepturi aliquam tenetur.</li>
+                <li>Sit reiciendis adipisci natus?</li>
+                <li>Fuga ut maxime corrupti?</li>
+                <li>Recusandae voluptates ab voluptate!</li>
+                <li>Assumenda ipsum at ex!</li>
+                <li>Exercitationem, autem molestiae. Culpa.</li>
+            </ul>
+            <ul class="without-subgrid">
+                <li>Lorem ipsum dolor sit amet consectetur.</li>
+                <li>Atque saepe alias eius officiis asperiores.</li>
+                <li>Quo cumque eveniet voluptas debitis expedita.</li>
+                <li>Distinctio inventore odit consequuntur delectus dignissimos!</li>
+                <li>Natus dolorum veritatis quo esse cumque!</li>
+                <li>Delectus beatae optio vel sequi minima.</li>
+                <li>Eligendi necessitatibus ipsa nihil accusamus recusandae.</li>
+                <li>Cupiditate vel temporibus eum atque quod.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>With subgrid</h2>
+        <div class="lists with-subgrid">
+            <ul>
+                <li>Lorem ipsum dolor sit.</li>
+                <li>Voluptates rem maxime saepe?</li>
+                <li>Dolores excepturi aliquam tenetur.</li>
+                <li>Sit reiciendis adipisci natus?</li>
+                <li>Fuga ut maxime corrupti?</li>
+                <li>Recusandae voluptates ab voluptate!</li>
+                <li>Assumenda ipsum at ex!</li>
+                <li>Exercitationem, autem molestiae. Culpa.</li>
+                <li>Assumenda ipsum at ex!</li>
+                <li>Lorem ipsum dolor sit.</li>
+            </ul>
+            <ul>
+                <li>Lorem ipsum dolor sit amet consectetur.</li>
+                <li>Atque saepe alias eius officiis asperiores.</li>
+                <li>Quo cumque eveniet voluptas debitis expedita.</li>
+                <li>Distinctio inventore odit consequuntur delectus dignissimos!</li>
+                <li>Natus dolorum veritatis quo esse cumque!</li>
+                <li>Delectus beatae optio vel sequi minima.</li>
+                <li>Eligendi necessitatibus ipsa nihil accusamus recusandae.</li>
+                <li>Cupiditate vel temporibus eum atque quod.</li>
+                <li>Eligendi necessitatibus ipsa nihil accusamus recusandae.</li>
+                <li>Cupiditate vel temporibus eum atque quod.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <p>A paragraph convert to list</p>
+        <p>A paragraph convert to list</p>
+    </section>
+</body>
+
+</html>
