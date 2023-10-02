@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stacking Context</title>
+    <style>
+        body {
+            background: #171717;
+            font-family: monospace;
+        }
+
+        h1 {
+            margin: 0;
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: rgb(89, 232, 156);
+        }
+
+        p {
+            margin: 0;
+            background: rgb(0, 150, 255, 0.5);
+        }
+
+        .content {
+            background: white;
+            padding: 1.5em;
+            margin: 0 auto;
+            max-width: 55rem;
+            position: relative;
+            margin-bottom: 4rem !important;
+        }
+
+        .content::before {
+            position: absolute;
+            display: block;
+            content: '';
+            width: 200px;
+            top: -1em;
+            left: -1em;
+            bottom: -1em;
+            z-index: -1;
+            background: rgb(89, 232, 156);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Stacking Context</h1>
+
+    <div class="content">
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Reprehenderit, eos magni consequatur sapiente eius saepe
+            nobis a labore quisquam officiis obcaecati autem
+            exercitationem aut ullam. Ea amet aut distinctio.
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Reprehenderit, eos magni consequatur sapiente eius saepe
+            nobis a labore quisquam officiis obcaecati autem
+            exercitationem aut ullam. Ea amet aut distinctio.
+        </p>
+    </div>
+    <div class="content">
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Reprehenderit, eos magni consequatur sapiente eius saepe
+            nobis a labore quisquam officiis obcaecati autem
+            exercitationem aut ullam. Ea amet aut distinctio.
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Reprehenderit, eos magni consequatur sapiente eius saepe
+            nobis a labore quisquam officiis obcaecati autem
+            exercitationem aut ullam. Ea amet aut distinctio.
+        </p>
+    </div>
+    <div class="content">
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Reprehenderit, eos magni consequatur sapiente eius saepe
+            nobis a labore quisquam officiis obcaecati autem
+            exercitationem aut ullam. Ea amet aut distinctio.
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Reprehenderit, eos magni consequatur sapiente eius saepe
+            nobis a labore quisquam officiis obcaecati autem
+            exercitationem aut ullam. Ea amet aut distinctio.
+        </p>
+    </div>
+</body>
+
+</html>
