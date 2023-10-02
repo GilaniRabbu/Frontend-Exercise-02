@@ -1,0 +1,42 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #191970;
+}
+
+.parent {
+    padding: 1em;
+    margin: 3em auto;
+    max-width: 1200px;
+    outline: 5px solid #90EE90;
+}
+
+/* Layout 1 */
+
+.layout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.layout > * {
+    flex: 1;
+}
+
+/* Layout 2 */
+
+.layouts {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(22rem, 100%), 1fr));
+}
+
+.mini {
+    background: #90EE90;
+    padding: 1em;
+}
