@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+    height: 2000px;
+}
+
+.icon-bar {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+}
+
+.icon-bar a {
+    display: block;
+    text-align: center;
+    padding: 1em;
+    transition: all 0.3s ease;
+    color: #FAFAFA;
+    font-size: 1.2rem;
+}
+
+.icon-bar a:hover {
+    background-color: #151515;
+}
+
+.facebook {
+    background: #3B5998;
+    color: #FAFAFA;
+}
+
+.twitter {
+    background: #55ACEE;
+    color: #FAFAFA;
+}
+
+.google {
+    background: #DD4B39;
+    color: #FAFAFA;
+}
+
+.linkedin {
+    background: #007BB5;
+    color: #FAFAFA;
+}
+
+.youtube {
+    background: #BB0000;
+    color: #FAFAFA;
+}
+
+.content {
+    margin-left: 5rem;
+    font-size: 1.5rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
