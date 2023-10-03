@@ -1,0 +1,57 @@
+/* Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+/* Utility Classes */
+.flow-content>*+* {
+  margin-top: 1.25rem;
+}
+
+/* General Styling */
+body {
+  font-family: "PT Sans", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin: 0;
+}
+
+h1 {
+  font-weight: 400;
+}
+
+.hero {
+  background-image: url(hero.jpg);
+  background-size: cover;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+}
+
+.hero__content {
+  background-color: rgba(255, 255, 255, 1);
+  max-width: 50rem;
+  padding: 3rem 2rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-weight: 700;
+  font-size: 1.125rem;
+  color: inherit;
+  background: #59E89C;
+  padding: 0.75em 1.5em;
+}
