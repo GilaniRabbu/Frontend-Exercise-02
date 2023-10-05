@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Generate a Restaurant Bill Receipt with a Print Option">
+    <meta name="keywords" content="web development, restaurant, restaurant bill, receipt, GilaniRabbu">
+    <meta name="author" content="GilaniRabbu">
+    <meta name="robots" content="INDEX, FOLLOW">
+
+    <meta name="theme-color" content="#364776">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#364776">
+    <meta name="apple-mobile-web-app-title" content="Restaurant Bill Receipt">
+
+    <meta property="og:title" content="Restaurant Bill Receipt | GilaniRabbu">
+    <meta property="og:description" content="Generate a Restaurant Bill Receipt with a Print Option">
+    <meta property="og:url" content="https://gilanirabbu.github.io/restaurant-bill-receipt/">
+    <meta property="og:type" content="website">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="favicon.svg" type="image/svg">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Restaurant Bill Receipt</title>
+</head>
+
+<body>
+    <section class="bill-input">
+        <input type="text" id="item-name" placeholder="Item">
+        <input type="number" name="quantity" id="quantity" placeholder="Quantity" value="1">
+        <input type="number" name="price" id="price" placeholder="Price">
+        <button type="button" id="item-add">Add To Bill</button>
+    </section>
+
+    <section class="bill" id="bill">
+        <h1>Restaurant Bill</h1>
+        <table>
+            <thead>
+                <th>Item Name</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Amount</th>
+            </thead>
+            <tbody id="table-body"></tbody>
+        </table>
+        <button id="print-btn">Print</button>
+        <p id="sign">Toufiq Gilani</p>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
