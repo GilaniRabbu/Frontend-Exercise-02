@@ -5,7 +5,7 @@
 }
 
 body {
-    color: white;
+    color: #FFF;
     background-color: #0096FF;
     font-family: "Roboto", sans-serif;
     display: grid;
@@ -40,7 +40,7 @@ body {
     --translate-y: calc(-100% - var(--arrow-size));
     content: attr(data-tooltip);
     background-color: var(--tooltip-color);
-    color: white;
+    color: #FFF;
     padding: .5em;
     border-radius: .3em;
     width: max-content;
