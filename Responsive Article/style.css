@@ -43,7 +43,7 @@ a {
 
 .article {
     display: flex;
-    background: white;
+    background: #FFF;
     width: 900px;
     max-width: 75rem;
     padding: 3rem;
