@@ -1,0 +1,100 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    max-width: 350px;
+    margin: 30px auto;
+    padding: 15px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: #1E6AE1;
+    color: #FFF;
+}
+
+.card {
+    max-width: 350px;
+    font-size: 0;
+    margin: 0 auto;
+    margin-top: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+.card:hover {
+    box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.2);
+}
+
+.calc-head #result {
+    width: 345px;
+    height: 100px;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: right;
+    padding: 0 5px;
+    letter-spacing: 2px;
+    outline: none;
+}
+
+.calc-body .btn {
+    width: 87px;
+    height: 70px;
+    font-weight: bold;
+    font-size: 1rem;
+    background-color: #1F2326;
+    color: #FFF;
+}
+
+.calc-body .side-btn {
+    background-color: #1E6AE1;
+}
+
+.calc-body .ans-btn {
+    background-color: #057055;
+}
+
+.btn:hover {
+    background-color: #901030F5;
+}
+
+@media (max-width: 600px) {
+    body {
+        background-color: #AAD2E6;
+        padding: 1%;
+    }
+
+    h1 {
+        max-width: 250px;
+    }
+
+    .card {
+        max-width: 280px;
+    }
+
+    .calc-head #result {
+        width: 267px;
+        height: 80px;
+        font-size: 1.5rem;
+    }
+
+    .calc-body .btn {
+        width: 70px;
+        height: 60px;
+        font-weight: bold;
+        font-size: 1rem;
+        background-color: #1F2326;
+        color: #FFF;
+    }
+
+    .btn:hover {
+        background-color: #1E6AE1;
+    }
+}
