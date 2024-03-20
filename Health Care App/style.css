@@ -1,0 +1,91 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background-color: #202020;
+}
+
+body {
+    background: none repeat scroll 0 0;
+    font-family: monospace;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+}
+
+#tracking_area {
+    width: 100%;
+    clear: both;
+    padding: 2.8rem 0;
+}
+
+.inner-tracking {
+    width: 98%;
+    max-width: 1140px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.inner-tracking h2 {
+    color: #FFF;
+    font-weight: 500;
+    margin-bottom: 1.2rem;
+}
+
+.inner-tracking.main {
+    display: flex;
+}
+
+.child-tracking {
+    background: #4D58DE;
+    color: #FFF;
+    width: 25%;
+    padding: 3rem 2rem;
+    margin: 0 1% .6rem;
+    border-radius: 25px;
+}
+
+.child-tracking:nth-child(1) {
+    background: #FF4D4D;
+}
+
+.child-tracking:nth-child(2) {
+    background: #FFAF40;
+}
+
+.child-tracking:nth-child(3) {
+    background: #18DCFF;
+}
+
+.child-tracking i {
+    font-size: 3.1rem;
+    margin-bottom: 1.2rem;
+}
+
+.child-tracking h5 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 1.2rem;
+    margin: 0 0 .6rem;
+}
+
+@media (max-width: 768px) {
+    .inner-tracking.main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .child-tracking {
+        width: 100%;
+        border-radius: 15px;
+    }
+}
