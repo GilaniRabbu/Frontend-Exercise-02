@@ -1,0 +1,11 @@
+body {
+    font-size: 4rem;
+    letter-spacing: 0.1rem;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    color: #7CFC00;
+    background-color: #151515;
+}
